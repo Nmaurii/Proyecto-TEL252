@@ -1,4 +1,4 @@
-from Sistema import *
+from Interfaz import *
 from funciones import *
 import sys
 import termios
@@ -6,16 +6,16 @@ import tty
 
 
 def main():
+
+    cantidad_muestras = 5
     
-    sistema = Sistema("Nicolas", 8)
-    sistema.set_contrasena()
-
-    sistema.set_muestras()    
-    sistema.login()
+    app = Interfaz(cantidad_muestras)
+    app.run()
 
 
-    termios.tcflush(sys.stdin, termios.TCIOFLUSH)
+    #termios.tcflush(sys.stdin, termios.TCIOFLUSH)
 
 if __name__ == "__main__":
     main()
+
 
